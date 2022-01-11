@@ -1,0 +1,3 @@
+
+[{"xName":"NRC","_x":1,"_y":6,"name":"NRC","value":6,"color":"#FF950C"}
+    ,{"xName":"Parool","_x":2,"_y":8,"name":"Parool","value":8,"color":"#FEDC03"},{"xName":"Trouw","_x":3,"_y":16,"name":"Trouw","value":16,"color":"#0D8DFF"},{"xName":"Telegraaf","_x":4,"_y":19,"name":"Telegraaf","value":19,"color":"#7CDA01"},{"xName":"AD","_x":5,"_y":26,"name":"AD","value":26,"color":"#F02C03"},{"xName":"Volkskrant","_x":6,"_y":26,"name":"Volkskrant","value":26,"color":"#B02FF7"}]
