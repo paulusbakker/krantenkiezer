@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    min-width: 360px;
+    width: 100vw;
+    color: white;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.content {
+    min-height: 90vh;
+    /*height: auto;*/
+}
+.break {
+    flex-basis: 100%;
+    height: 30px;
+}

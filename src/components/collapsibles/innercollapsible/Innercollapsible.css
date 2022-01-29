@@ -1,0 +1,27 @@
+innercollapsible-article {
+
+}
+
+.innercollapsible {
+    color: darkorange;
+}
+
+.innercollapsible-article {
+
+}
+
+.innercollapsible-link:link {
+    color: ghostwhite;
+}
+
+.innercollapsible-link:visited {
+    color: darkred;
+}
+
+.innercollapsible-link:hover {
+    color: white
+}
+
+.innercollapsible-link:active {
+    color: white;
+}

@@ -1,4 +1,4 @@
-.container {
+.background-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -18,7 +18,7 @@
     opacity: 30%;
 }
 
-.tile {
+.background-tile {
     width: 250px;
     height: 354px;
 }

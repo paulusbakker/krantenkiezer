@@ -1,0 +1,15 @@
+.collapsible-paper-container {
+font-size: large;
+}
+.collapsible-paper-results {
+
+}
+.collapsible-paper-no-results {
+    color: grey;
+}
+.collapsible-paper {
+    color: darkorange;
+}
+.collapsible-articles {
+text-align: left;
+}

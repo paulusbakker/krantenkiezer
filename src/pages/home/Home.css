@@ -1,0 +1,21 @@
+.home-center-screen {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 60vh;
+
+}
+
+.home-heading1 {
+    font-size: 64px;
+    flex-basis: 35%;
+}
+
+.home-heading1, .home-heading2 , .home-heading3 {
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    padding-left:20px; padding-right: 20px;
+}
+
+

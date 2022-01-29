@@ -1,57 +1,68 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
+import {FiMenu, FiX} from 'react-icons/fi';
+import {Link} from 'react-router-dom';
 import {AuthContext} from "../../context/AuthContext";
-import logo from '../../assets/trechter.png';
-import styles from './Navigator.module.css';
-import {useHistory, Link} from 'react-router-dom';
-import Backgroundslider from "../backgroundslider/Backgroundslider";
+import './Navigator.css';
+import logo from  "../../assets/logo.png";
 
 function Navigator() {
-    const history = useHistory();
     const {isAuth, logout} = useContext(AuthContext);
+    const [open, setOpen] = useState(false);
+    const handleClick = () => {
+        setOpen(!open);
+    };
+    const closeMenu = () => {
+        setOpen(false);
+    };
+
     return (
-        <nav>
-            <Backgroundslider/>
+        <nav className="navbar">
+
             <Link to="/">
-                 <span className={styles['logo-container']}>
-                     <img src={logo} alt="logo"/>
-                     Kranten<br/>Filter
+                <span >
+                     <img className="nav-logo" src={logo} alt="logo"/>
                  </span>
             </Link>
-            {!isAuth.isAuth ?
-                <div>
-                    <button
-                        type={styles.button}
-                        onClick={() => history.push('/signin')}
-                    >
-                        Log in
-                    </button>
-                    <button
-                        type={styles.button}
-                        onClick={() => history.push('/signup')}
-                    >
-                        Registreren
-                    </button>
-                </div>
-                :
-                <div>
-                    {isAuth.user}
-                    <button
-                        type={styles.button}
-                        onClick={() => history.push('/search')}
-                    >
-                        Zoeken
-                    </button>
-                    <button
-                        type={styles.button}
-                        onClick={() => {
-                            logout();
-                            console.log('Gebruiker is uitgelogd!');
-                            // history.push('/')
-                        }}
-                    >
-                        Log uit
-                    </button>
-                </div>}
+            <div onClick={handleClick} className="nav-icon">
+                {open ? <FiX/> : <FiMenu/>}
+            </div>
+            <ul className={open ? 'nav-links active' : 'nav-links'}>
+                <li className="nav-item">
+                    <Link to="/" className="nav-link" onClick={closeMenu}>
+                        Home
+                    </Link>
+                </li>
+                {!isAuth.isAuth ?
+                    <>
+                        <li className="nav-item">
+                            <Link to="/signin" className="nav-link" onClick={closeMenu}>
+                                Log in
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/signup" className="nav-link" onClick={closeMenu}>
+                                Registreren
+                            </Link>
+                        </li>
+                    </> :
+                    <>
+                        <li className="nav-item">
+                            <Link to="/search" className="nav-link" onClick={closeMenu}>
+                                Zoeken
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/" className="nav-link" onClick={() => {
+                                logout();
+                                closeMenu()
+                            }}>
+                                Log uit
+
+                            </Link>
+                        </li>
+                    </>}
+            </ul>
+
         </nav>
     );
 }

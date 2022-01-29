@@ -1,0 +1,96 @@
+
+.user-form {
+    background-color: darkgray;
+    padding: 10px;
+    border-radius: 4px;
+    max-width: 720px;
+    margin: auto;
+}
+
+.user-form-header {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    color: black;
+}
+
+.user-form-label {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-weight: bold;
+    justify-content: center;
+    margin: auto;
+}
+
+.user-form-label-p {
+    flex-basis: 220px;
+    flex-grow: 1;
+    height: 30px;
+    line-height: 30px;
+    white-space: nowrap;
+    text-align: left;
+    color: black;
+}
+
+.user-form-label-input {
+    flex-basis: 220px;
+    flex-grow: 1.5;
+    height: 30px;
+}
+
+.user-form-label-button {
+    flex-basis: 60%;
+    border-radius: 4px;
+    border: none;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.1vw 2vw;
+    background-color: green;
+    color: black;
+}
+
+.user-form-label-button:disabled {
+    background-color: indianred;
+}
+
+.user-form-p {
+    flex-basis: 100%;
+    font-size: small;
+    text-align: center;
+}
+
+.user-form-error {
+    color: red;
+    height: 25px;
+    line-height: 25px;
+    margin: 0;
+    text-align: right;
+    flex-basis: 100%;
+}
+
+.user-form-explanation {
+    color: black;
+}
+
+.user-form-loading {
+    flex-basis: 80%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 567px) {
+    .user-form-label-p {
+        text-align: center;
+    }
+
+    .user-form-error {
+        text-align: center;
+    }
+
+    .user-form-explanation {
+        display: none;
+    }
+
+}
