@@ -11,10 +11,6 @@ function Results() {
     const filteredArticlesFinal = location.state.filteredArticlesFinal;
     const showDetails=location.state.showDetails;
     const barChartArray=BarChartArray(filteredArticlesFinal)
-    console.log(filteredArticlesFinal);
-    console.log(barChartArray);
-    console.log(showDetails);
-    console.log(location.state);
     return <>
         {/*make bar chart*/}
         <div className="result-chart-container">Resultaten voor {showDetails}

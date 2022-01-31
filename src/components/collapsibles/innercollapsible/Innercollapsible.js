@@ -8,11 +8,11 @@ function InnerCollapsible({articles, date}) {
     const {getCollapseProps, getToggleProps, isExpanded} = useCollapse();
     return (
         <div className="innercollapsible">
-            // change prefix depending on extended state
+            {/*change prefix depending on extended state*/}
             <div {...getToggleProps()}>
                 {isExpanded ? "▼" : "►"} {date}
             </div>
-            // if
+
             {isExpanded &&
             articles.map((article, index) => {
                 if (FormatDatum(article.pubDate) === date) {
